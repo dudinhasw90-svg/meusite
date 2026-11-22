@@ -1,34 +1,39 @@
-let editando = false;
+/* ATUALIZAR AUTOMATICAMENTE O ANO */
 
-function ativarEdicao() {
-    editando = !editando;
+const ano = document.getElementById("ano");
 
-    document.querySelectorAll("main section").forEach(secao => {
-        secao.contentEditable = editando;
+ano.textContent = new Date().getFullYear();
+
+
+/* FILTRO DO CALENDÁRIO DE PROVAS */
+
+const filtro = document.getElementById("filtroTurma");
+
+const provas = document.querySelectorAll(
+    "#listaProvas tr"
+);
+
+filtro.addEventListener("change", function() {
+
+    const turmaSelecionada = filtro.value;
+
+    provas.forEach(function(prova) {
+
+        const turma = prova.dataset.turma;
+
+        if (
+            turmaSelecionada === "todas" ||
+            turma === turmaSelecionada
+        ) {
+
+            prova.style.display = "";
+
+        } else {
+
+            prova.style.display = "none";
+
+        }
+
     });
 
-    const botao = document.getElementById("modoEdicao");
-
-    if (editando) {
-        botao.textContent = "💾 Salvar alterações";
-    } else {
-        salvarSite();
-        botao.textContent = "✏️ Editar site";
-    }
-}
-
-function salvarSite() {
-    const conteudo = document.querySelector("main").innerHTML;
-
-    localStorage.setItem("falaEscola", conteudo);
-
-    alert("Alterações salvas neste navegador!");
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    const salvo = localStorage.getItem("falaEscola");
-
-    if (salvo) {
-        document.querySelector("main").innerHTML = salvo;
-    }
 });
