@@ -53,7 +53,7 @@ body {
 }
 
 
-/* MENU DE NAVEGAÇÃO */
+/* MENU */
 
 .menu {
     background-color: #7026a8;
@@ -160,7 +160,7 @@ section {
 }
 
 
-/* CARTÕES DE ACESSO */
+/* CARTÕES */
 
 .grade {
     display: grid;
@@ -265,7 +265,7 @@ tr:hover {
 }
 
 
-/* INTERVALO */
+/* INTERVALOS */
 
 .intervalo {
     background-color: #d7f4ff !important;
@@ -339,7 +339,7 @@ footer p {
 }
 
 
-/* ADAPTAÇÃO PARA CELULARES */
+/* RESPONSIVIDADE */
 
 @media (max-width: 700px) {
 
