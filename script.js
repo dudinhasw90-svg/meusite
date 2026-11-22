@@ -1,4 +1,4 @@
-/* ATUALIZAR AUTOMATICAMENTE O ANO */
+/* ATUALIZAR O ANO AUTOMATICAMENTE */
 
 const ano = document.getElementById("ano");
 
