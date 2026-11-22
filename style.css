@@ -53,7 +53,7 @@ body {
 }
 
 
-/* MENU */
+/* MENU DE NAVEGAÇÃO */
 
 .menu {
     background-color: #7026a8;
@@ -262,6 +262,15 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #d7f4ff;
+}
+
+
+/* INTERVALO */
+
+.intervalo {
+    background-color: #d7f4ff !important;
+    color: #273cbd;
+    font-weight: bold;
 }
 
 
